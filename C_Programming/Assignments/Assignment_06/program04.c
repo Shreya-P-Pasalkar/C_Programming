@@ -1,0 +1,84 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Required Header files
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>                                       // For Input Output
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : Mupltiply
+//  Description :   It is used to find Multiplication of 3 numbers
+//  Input :         Integer
+//  Output :        Integer
+//  Author :        Shreya Pramod Pasalkar
+//  Date :          30/10/2025
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+int Multiply(int iNo1,int iNo2,int iNo3)
+{
+    int iResult = 1;
+    int iCnt = 0;
+
+    if(iNo1 != 0)
+    {
+        iResult = iResult * iNo1;
+    }
+    else
+    { 
+        iCnt++;
+    }
+
+    if(iNo2 != 0)
+    {
+        iResult = iResult * iNo2;
+    }
+    else
+    { 
+        iCnt++;
+    }
+
+    if(iNo3 != 0)
+    {
+        iResult = iResult * iNo3;
+    }
+    else
+    { 
+        iCnt++;
+    }
+
+    return iResult;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry Point Function of the application
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue1 = 0,iValue2 = 0,iValue3 = 0, iRet = 0;
+
+    printf("Enter three numbers:\n");
+    scanf("%d %d %d",&iValue1,&iValue2,&iValue3);
+
+    iRet = Multiply(iValue1,iValue2,iValue3);
+
+    printf("Multiplication result is : %d",iRet);
+
+    return 0;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Testcases : 
+// 
+// Input : 5 4 7       Output : 140
+// Input : 5 0 7       Output : 35
+// Input : 5 0 0       Output : 5 
+// Input : 0 0 0       Output : 0 
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////

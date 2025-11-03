@@ -1,0 +1,77 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Required Header files
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>                                    // For Input Output
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : FactorialDiff
+//  Description :   It is used to find difference between even and odd factorial
+//  Input :         Integer
+//  Output :        Integer
+//  Author :        Shreya Pramod Pasalkar
+//  Date :          30/10/2025
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+int FactorialDiff(int iNo)
+{
+    int iCnt = 0;
+    int iEven = 1;
+    int iOdd = 1;
+    int iDiff = 0;
+
+    if (iNo < 0)
+    {
+        iNo = -iNo;
+    }
+
+    for(iCnt = iNo; iCnt >= 1; iCnt--)
+    {
+        if((iCnt % 2) == 0)
+        {
+            iEven = iEven * iCnt;
+        }
+        else
+        {
+            iOdd = iOdd * iCnt;
+        }
+    }
+
+    iDiff = iEven - iOdd;
+    return iDiff;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry Point Function of the application
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0, iRet = 0;
+    
+    printf("Enter number:\n");
+    scanf("%d",&iValue);
+
+    iRet = FactorialDiff(iValue);
+
+    printf("Difference of even and odd factorial is %d",iRet);
+
+    return 0;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Testcases : 
+// 
+// Input : 5        Output : -7
+// Input : -5       Output : -7
+// Input : 10       Output : 2895
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////
