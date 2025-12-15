@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-void StrCpyRev(char *src, char *dest)
+void StrCpyTogggle(char *src, char *dest)
 {
     while(*src != '\0')
     {
@@ -26,7 +26,7 @@ int main()
     printf("Enter string: \n");
     scanf("%[^'\n']s" , Arr);
 
-    StrCpyRev(Arr , Brr);
+    StrCpyTogggle(Arr , Brr);
 
     printf("%s\n" , Brr);
 
