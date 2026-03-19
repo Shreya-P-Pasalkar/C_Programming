@@ -52,7 +52,7 @@ int main()
 
     iRet = CountSpaces(arr);
 
-    printf("Number of white spaces are : %d\n",iRet);
+    printf("Number of white spaces : %d\n",iRet);
 
     return 0;
 }
