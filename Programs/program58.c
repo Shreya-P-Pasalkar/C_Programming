@@ -1,56 +1,35 @@
-// Code to demonstrate the need of iteration
+// iteration
 
 #include<stdio.h>
 
-int main()
+void DisplayDigits(int iNo)
 {
-    int iNo = 723614;
     int iDigit = 0;
 
     printf("------------------------------------------------------------------------\n");
-
     printf("Original value of iNo is : %d\n",iNo);
 
-    printf("------------------------------------------------------------------------\n");
-    iDigit = iNo % 10;
-    printf("iDigit is : %d\n",iDigit);
-    iNo = iNo /10;
-    printf("iNo is : %d\n",iNo);
+    while(iNo != 0)
+    {
+        printf("------------------------------------------------------------------------\n");
+        iDigit = iNo % 10;
+        printf("iDigit is : %d\n",iDigit);
+        iNo = iNo /10;
+        printf("iNo is : %d\n",iNo);
+    }
+        
 
     printf("------------------------------------------------------------------------\n");
+}
 
-    iDigit = iNo % 10;
-    printf("iDigit is : %d\n",iDigit);
-    iNo = iNo /10;
-    printf("iNo is : %d\n",iNo);
-
-    printf("------------------------------------------------------------------------\n");   
-
-    iDigit = iNo % 10;
-    printf("iDigit is : %d\n",iDigit);
-    iNo = iNo /10;
-    printf("iNo is : %d\n",iNo);
+int main()
+{
+    int iValue = 0;
     
-    printf("------------------------------------------------------------------------\n");
-    iDigit = iNo % 10;
-    printf("iDigit is : %d\n",iDigit);
-    iNo = iNo /10;
-    printf("iNo is : %d\n",iNo);
+    printf("Enter number : \n");
+    scanf("%d",&iValue);
 
-    printf("------------------------------------------------------------------------\n");
-    iDigit = iNo % 10;
-    printf("iDigit is : %d\n",iDigit);
-    iNo = iNo /10;
-    printf("iNo is : %d\n",iNo);
-
-
-    printf("------------------------------------------------------------------------\n");
-    iDigit = iNo % 10;
-    printf("iDigit is : %d\n",iDigit);
-    iNo = iNo /10;
-    printf("iNo is : %d\n",iNo);
-
-
-    printf("------------------------------------------------------------------------\n");
+    DisplayDigits(iValue);
+    
     return 0;
 }

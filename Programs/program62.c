@@ -2,19 +2,23 @@
 
 #include<stdio.h>
 
-int CountDigits(int iNo)
+int SumDigits(int iNo)
 {
-    int iDigit = 0;
-    int iCount = 0;
+    int iSum = 0, iDigit = 0;
+
+    if(iNo <= 0)
+    {
+        iNo = -iNo;
+    }
 
     while(iNo != 0)
     {
         iDigit = iNo % 10;
         iNo = iNo /10;
-        iCount++;
+        iSum = iSum + iDigit;
     }
 
-    return iCount;
+    return iSum;
         
 }
 
@@ -25,8 +29,8 @@ int main()
     printf("Enter number : \n");
     scanf("%d",&iValue);
 
-    iRet = CountDigits(iValue);
-    printf("Number of digits are : %d\n",iRet);
+    iRet = SumDigits(iValue);
+    printf("Sum of digits is : %d\n",iRet);
     
     return 0;
 }
