@@ -11,9 +11,7 @@ bool CheckPrime(int iNo)
         iNo = -iNo;
     }
 
-    bFlag = true;
-
-    for(iCnt = 2; iCnt <= (iNo/2); iCnt++)
+    for(iCnt = 2, bFlag = true; iCnt <= (iNo/2); iCnt++)
     {
         if((iNo % iCnt) == 0)
         {
@@ -21,6 +19,8 @@ bool CheckPrime(int iNo)
             break;               // Optimization
         }
     }
+
+    return bFlag;
 }
 
 int main()

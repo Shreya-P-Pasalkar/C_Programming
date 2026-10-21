@@ -4,12 +4,14 @@
 bool CheckPrime(int iNo)
 {
     int iCnt = 0;
-    bool bFlag = true;
+    bool bFlag = false;
 
     if(iNo < 0)     //Updater
     {
         iNo = -iNo;
     }
+
+    bFlag = true;
 
     for(iCnt = 2; iCnt <= (iNo/2); iCnt++)
     {
